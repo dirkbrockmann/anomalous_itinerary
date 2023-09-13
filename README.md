@@ -9,7 +9,7 @@
 This explorable illustrates Lévy flights, a class of random walks that, unlike ordinary, diffusive random walks exhibit scale free structure and power-law tails in the single step distributions such that the central limit theorem no longer applies.
 
 The explorable is part of the [**Complexity Exporables Collection**](https://www.complexity-explorables.org). For more information about the system and its behavior consult the explorable
-> [**“Barista's Secret” - Lévy flights - Superdiffusive, Scale-Free Random Walks**](https://www.complexity-explorables.org/explorables/anomalous-itinerary/)
+> [**“Anomalous Itinerary” - Lévy flights - Superdiffusive, Scale-Free Random Walks**](https://www.complexity-explorables.org/explorables/anomalous-itinerary/)
 
 ## Installation & Use
 
