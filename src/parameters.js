@@ -6,28 +6,25 @@
 // utils.js provides methods for extracting various types of parameters for later use
 
 export default {
-		dt:1,
-		L:100,
-		agentsize: 1.0,
-	
-		speed: {
-			range:[0,1],
-			default:0.2
+		T0:100,
+		scale_factor:5,
+		maximum_steps:1000,
+		exponent : {
+			choices:[0.75,1.0,1.25,1.5,1.75,2.0,3.0],
+			default:3
 		},
-		wiggle: {
-			range:[0,180],
-			default:50
+		number_of_walkers : {
+			choices:[1,5,10,25],
+			default:2
 		},
-		interaction_radius:{
-			range : [0,5],
-			default : 3
+		hide_path: {
+			default: false
 		},
-		number_of_particles : {
-			choices:[50,100,200,400],
-		default:2
+		hide_locations: {
+			default: false
 		},
-		color_by_heading: {
-			default: true
+		hide_positions: {
+			default: false
 		}
 }
 
