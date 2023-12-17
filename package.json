@@ -1,8 +1,8 @@
 {
   "name": "@explorables/anomalous_itinerary",
   "title": "Anomalous Itinerary",
-  "version": "1.0.1",
-   "license": "CC-BY-4.0",
+  "version": "1.0.2",
+  "license": "CC-BY-4.0",
   "description": "A visual illustration of Lévy Flights - Superdiffusive, Scale-Free Random Walks",
   "repository": {
     "type": "git",
