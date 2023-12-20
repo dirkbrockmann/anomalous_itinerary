@@ -85,7 +85,7 @@ const initialize = (display,config) => {
 	ctx = display.node().getContext('2d');
 	line.context(ctx)	
 	
-	ctx.clearRect(1, 1, W-2, H-2);
+	ctx.clearRect(0, 0, W, H);
 	
 	let agents = take(walkers,param.number_of_walkers.choices[param.number_of_walkers.widget.value()])
 
@@ -107,7 +107,7 @@ const go = (display,config) => {
  		Y.domain(box(param.tick))
  	}
 	
-	ctx.clearRect(1, 1, W-2, H-2);
+	ctx.clearRect(0, 0, W, H);
 	let agents = take(walkers,param.number_of_walkers.choices[param.number_of_walkers.widget.value()])
 	if (!param.hide_path.widget.value()) {draw_path(agents)}
 	if (!param.hide_locations.widget.value()) {draw_locations(agents)}
