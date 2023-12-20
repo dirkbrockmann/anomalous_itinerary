@@ -6,6 +6,8 @@ import {initialize as model_init, go as model_go} from "./model.js"
 import {initialize as visual_init, go as visual_go, update as visual_update} from "./viz.js"
 import param from "./parameters.js"
 import * as ct from "./controls.js"
+import {styles} from "d3-widgets"
+
 
 function iterate (display,controls,config) {
 	let done = false
@@ -16,7 +18,7 @@ function iterate (display,controls,config) {
 		
 		 controls.select("#button_play")
 	 		.transition(1000).style("opacity",0)
-		 controls.select("#button_play").select(".track-overlay")
+		 controls.select("#button_play").selectAll("*")
 	 		.style("pointer-events","none")
 		
 		ct.go.press(controls);
