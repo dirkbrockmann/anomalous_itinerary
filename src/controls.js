@@ -3,6 +3,8 @@
 // variables and parameters defined in parameters.js
 
 import * as widgets from "d3-widgets"
+import {styles} from "d3-widgets"
+
 import {range,map,toPairs} from "lodash-es"
 
 import cfg from "./config.js"
@@ -41,22 +43,24 @@ const ch = toArray(choices);
 // 		);
 
 // making the toggle widgets objects, based on the switches
-		
+
 const toggles = map(bo, 
 		v => widgets.toggle()
 					.value(v.default)
 					.id(v.id)
 					.label(v.label)
-					.labelposition(cfg.widgets.toggle_label_position)
+					.labelposition(cfg.widgets.toggle_label_position)		
+					//.fontsize(typeof cfg.widgets.fontsize === "undefined" ? null : cfg.widgets.fontsize)
 		);
 
 // making the radio widgets objects, based on the choices
-		
+
 const radios = map(ch, 
 		v => widgets.radio()
 					.choices(v.choices)
 					.id(v.id)
 					.value(v.default)
+					//.fontsize(typeof cfg.widgets.fontsize === "undefined" ? null : cfg.widgets.fontsize)
 		);
 
 
@@ -119,16 +123,19 @@ export default (controls,grid)=>{
 	const expo_text_pos = grid.position(cfg.widgets.expo_textanchor.x,cfg.widgets.expo_textanchor.y)
 	const walker_text_pos = grid.position(cfg.widgets.walker_textanchor.x,cfg.widgets.walker_textanchor.y)
 
-	controls.append("text").text(cfg.widgets.expo_text)
+	controls.append("g")
 		.attr("transform","translate("+expo_text_pos.x+","+expo_text_pos.y+")")
-		.style("font-size",cfg.widgets.expo_textsize)
-		.style("text-anchor","middle")
+		.attr("class",styles.widget)
+		.append("text").text(cfg.widgets.expo_text)
+		.attr("class",styles.title)
 		.attr("id","expotext")
 	
-	controls.append("text").text(cfg.widgets.walker_text)
+	controls.append("g")
 		.attr("transform","translate("+walker_text_pos.x+","+walker_text_pos.y+")")
-		.style("font-size",cfg.widgets.walker_textsize)
-		.style("text-anchor","middle")
+		.attr("class",styles.widget)
+		.append("text").text(cfg.widgets.walker_text)
+		.attr("class",styles.title)
+		
 		.attr("id","walkertext")
 	
 	go.position(grid.position(cfg.widgets.playbutton_anchor.x,cfg.widgets.playbutton_anchor.y))

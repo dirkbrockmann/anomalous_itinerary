@@ -25,7 +25,7 @@ const startstop = (display,controls,config) => {
 	
 	 controls.select("#radio_exponent")
 	 	.transition(1000).style("opacity",ct.go.value()?0:1)
-	 controls.select("#radio_exponent").selectAll("*")
+	 controls.select("#radio_exponent")
 	 	.style("pointer-events",ct.go.value()?"none":null)
 	
 	 controls.select("#expotext")
@@ -44,7 +44,7 @@ export default (display,controls,config) => {
 	ct.setup.update(()=>{
 		initialize(display,config)
  		controls.select("#button_play").transition(1000).style("opacity",null)
-		controls.select("#button_play").selectAll("*").style("pointer-events",null) 
+		controls.select("#button_play").style("pointer-events",null) 
 	})
 	
 	 // this once gets the initialize() method defined in simulation.js
@@ -52,7 +52,7 @@ export default (display,controls,config) => {
 		()=>{
 				initialize(display,config)
 		 		controls.select("#button_play").transition(1000).style("opacity",null)
-				controls.select("#button_play").selectAll("*").style("pointer-events",null) 
+				controls.select("#button_play").style("pointer-events",null) 
 			}
 	)
 	

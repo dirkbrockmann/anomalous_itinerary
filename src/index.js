@@ -5,16 +5,14 @@
 
 import  'tachyons/css/tachyons.min.css'
 
-import cfg from "./container_config.js" // imports default classes and styles and parameters for the container
+import container_cfg from "./container_config.js"
+import cfg from "./config.js"
 import setup_container from "./setup_container.js"
 import setup_interactions from "./setup_interactions.js"
 import setup_controls from "./controls.js"
 import {initialize as setup_simulation} from "./simulation.js"
 import {go} from "./controls.js"
 import meta from "./meta.js"
-import * as d3 from "d3"
-
-
 
 
 // load is called in the webpage
@@ -26,7 +24,7 @@ import * as d3 from "d3"
 
 var display,controls,grid;
 
-const load = function (container_id,config=cfg) {
+const load = function (container_id,config=container_cfg) {
 	
 // setting up the container
 	
@@ -56,4 +54,5 @@ const halt  = function(){
 	}
 }
 
-export {load,cfg as config,halt,meta};
+
+export {load,container_cfg as config, halt,meta};

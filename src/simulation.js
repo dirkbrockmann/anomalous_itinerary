@@ -18,7 +18,6 @@ function iterate (display,controls,config) {
 		
 		 controls.select("#button_play")
 	 		.transition(1000).style("opacity",0)
-		 controls.select("#button_play").selectAll("*")
 	 		.style("pointer-events","none")
 		
 		ct.go.press(controls);

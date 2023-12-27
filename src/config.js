@@ -5,7 +5,6 @@
 
 export default {
 	widgets:{
-		fontsize:20,
 
 		toggle_anchor: {x:10,y:1},
 		toggle_label_position:"left",
