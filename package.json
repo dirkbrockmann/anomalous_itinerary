@@ -17,7 +17,7 @@
     "build": "webpack --mode production ",
     "dev": "webpack serve --static dist/ --mode development",
     "show": "http-server dist -o",
-	"pap": "npm version patch; git add . ; git commit -m \"$npm_package_version\"; git push; npm publish  "
+	"pap": "git add . ; git commit -m \"$npm_package_version\"; git push; npm publish  "
   },
   "keywords": [
     "complexity",
