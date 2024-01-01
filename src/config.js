@@ -21,7 +21,6 @@ export default {
 		expo_radio_shape:"circle",
 		expo_radio_buttonsize:30,
 		expo_text:"Exponent \u03BC",
-		expo_textsize:26,
 		expo_textanchor:{x:6,y:10},
 
 		walker_radio_anchor:{x:5,y:7.5},
@@ -30,7 +29,6 @@ export default {
 		walker_radio_labelposition:"bottom",
 		walker_radio_shape:"circle",
 		walker_radio_buttonsize:30,
-		walker_textsize:20,
 		walker_textanchor:{x:8,y:6.5},
 		walker_text:"Number of walkers",
 		
