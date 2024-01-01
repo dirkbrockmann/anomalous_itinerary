@@ -2,7 +2,7 @@
   "name": "@explorables/anomalous_itinerary",
   "title": "Anomalous Itinerary",
   "subtitle": "A visual illustration of Lévy Flights",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "license": "CC-BY-4.0",
   "description": "The explorable illustrates the properties of superdiffusive, scale-free random walks known as Lévy flights.",
   "repository": {
@@ -16,7 +16,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production ",
     "dev": "webpack serve --static dist/ --mode development",
-    "show": "http-server dist -o"
+    "show": "http-server dist -o",
+	"pap": "git add . ; git commit -m \"$npm_package_version\"; npm publish  "
   },
   "keywords": [
     "complexity",
