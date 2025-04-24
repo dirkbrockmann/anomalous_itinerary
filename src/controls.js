@@ -35,6 +35,7 @@ add_widget(ch,radios);
 
 const go = widgets.button().actions(["play","pause"]).id("play")
 const setup = widgets.button().actions(["back"]).id("reset")
+const reset = widgets.button().actions(["rewind"])
 		
 const buttons = [go,setup];
 
@@ -92,6 +93,6 @@ export default (controls,grid)=>{
 
 }
 
-export {toggles,radios,go,setup,booleans,choices}
+export {toggles,radios,go,setup,booleans,choices,reset}
 
 

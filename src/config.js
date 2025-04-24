@@ -35,7 +35,7 @@ export default {
 
 	},
 	simulation: {
-		delay:0,
+		delay:10,
 		path_width:1.5,
 		path_color:"rgba(0,0,0,0.5)",
 		loc_size_large:2,
