@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <title>Anomalous Itinerary</title>
+ <script src="./dist/index.umd.js"></script>
 </head>
 <body>
   <div id="explorable"></div>
-	 
+  <div id="explorable_umd"></div>	 
 <script type="module">
-  import load from './src/main.js';
-  const explorable = load("explorable");
+  import * as wonk from './src/main.js';
+  wonk.config.debug=true
+  const explorable = wonk.load("explorable");
   console.log(explorable.meta.title);
 </script>	
-   
+      <script type="text/javascript"> 
+   	   const anomalous_itinerary_instance = anomalous_itinerary.load('explorable_umd'); 
+   </script>
 </body>
 </html>
