@@ -3617,7 +3617,7 @@ const Dp = (t, n, e = 12, r = 12) => {
     reset: function(c, h) {
       u = h;
       const g = c.select("#toggle_" + n);
-      g.selectAll("." + y.handle).transition().attr("cx", u ? 2 * e : 0), g.classed(y.selected, u);
+      g.selectAll("." + y.handle).transition().attr("cx", u ? 2 * e : 0), g.classed(y.selected, u), s();
     }
   };
 }, cd = () => {
